@@ -9,7 +9,7 @@ namespace NaughtyAttributes.Editor
     [CustomPropertyDrawer(typeof(InputAxisAttribute))]
     public class InputAxisPropertyDrawer : PropertyDrawerBase
     {
-        private static readonly string AssetPath = Path.Combine("ProjectSettings", "InputManager.asset");
+        private static readonly string AssetPath = Path.Combine("ProjectSettings", "InputController.asset");
         private const string AxesPropertyPath = "m_Axes";
         private const string NamePropertyPath = "m_Name";
 
@@ -26,10 +26,10 @@ namespace NaughtyAttributes.Editor
 
             if (property.propertyType == SerializedPropertyType.String)
             {
-                var inputManagerAsset = AssetDatabase.LoadAssetAtPath(AssetPath, typeof(object));
-                var inputManager = new SerializedObject(inputManagerAsset);
+                var InputControllerAsset = AssetDatabase.LoadAssetAtPath(AssetPath, typeof(object));
+                var InputController = new SerializedObject(InputControllerAsset);
 
-                var axesProperty = inputManager.FindProperty(AxesPropertyPath);
+                var axesProperty = InputController.FindProperty(AxesPropertyPath);
                 var axesSet = new HashSet<string>();
                 axesSet.Add("(None)");
 

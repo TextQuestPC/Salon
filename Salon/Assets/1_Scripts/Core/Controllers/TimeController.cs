@@ -4,8 +4,8 @@ using TimerSystem;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "TimeManager", menuName = "Managers/TimeManager")]
-    public class TimeManager : BaseManager, IWaitTimer
+    [CreateAssetMenu(fileName = "TimeController", menuName = "Controllers/TimeController")]
+    public class TimeController : Controller, IWaitTimer
     {
         private List<IWaitTimer> waitingObjects = new List<IWaitTimer>();
 

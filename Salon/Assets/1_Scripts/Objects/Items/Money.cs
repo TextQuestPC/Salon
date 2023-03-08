@@ -1,4 +1,4 @@
-using Characters;
+﻿using Characters;
 using Core;
 
 namespace ObjectsOnScene
@@ -11,7 +11,7 @@ namespace ObjectsOnScene
 
         protected override void PlayerInCollider(Player player)
         {
-            BoxManager.GetManager<ValuesManager>().AddMoney(countMoney);
+            BoxControllers.GetController<ValuesController>().AddMoney(countMoney);
             Death();
         }
 

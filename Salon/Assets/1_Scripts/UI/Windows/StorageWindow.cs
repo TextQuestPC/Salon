@@ -1,8 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using ObjectsOnScene;
 using Data;
 using Core;
+using UI.Windows;
 
 namespace UI
 {
@@ -18,7 +18,7 @@ namespace UI
         {
             for (int i = 0; i < typeItems.Length; i++)
             {
-                DataItemUI data = BoxManager.GetManager<DataManager>().GetDataItemUI(typeItems[i]);
+                DataItemUI data = BoxControllers.GetController<DataController>().GetDataItemUI(typeItems[i]);
 
                 itemButtons[i].gameObject.SetActive(true);
                 itemButtons[i].SetDataItemUI(this, typeItems[i], data.SpriteItem);
@@ -27,12 +27,12 @@ namespace UI
 
         public void OnClickButtonItem(TypeItem typeItem)
         {
-            BoxManager.GetManager<GameManager>().PlayerTryGetItem(typeItem);
+            BoxControllers.GetController<GameController>().PlayerTryGetItem(typeItem);
 
             Hide();
         }
 
-        protected override void AfterHide()
+        public override void Hide()
         {
             foreach (var button in itemButtons)
             {

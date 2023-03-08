@@ -1,4 +1,4 @@
-using Core;
+﻿using Core;
 using InputSystem;
 using ObjectsOnScene;
 using System.Collections.Generic;
@@ -82,7 +82,7 @@ namespace Characters
 
         public void GetItemFromPlace(TypeItem typeItem)
         {
-            Item item = BoxManager.GetManager<CreatorManager>().CreateItem(typeItem);
+            Item item = BoxControllers.GetController<CreatorController>().CreateItem(typeItem);
             item.transform.position = positionItem.transform.position;
             item.transform.SetParent(positionItem.transform);
 

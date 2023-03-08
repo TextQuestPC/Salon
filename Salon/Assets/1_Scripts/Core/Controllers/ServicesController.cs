@@ -1,11 +1,11 @@
-using ObjectsOnScene;
+﻿using ObjectsOnScene;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "ServicesManager", menuName = "Managers/ServicesManager")]
-    public class ServicesManager : BaseManager
+    [CreateAssetMenu(fileName = "ServicesController", menuName = "Controllers/ServicesController")]
+    public class ServicesController : Controller
     {
         private List<Service> services = new List<Service>();
         private RestZone restZone;
@@ -16,12 +16,12 @@ namespace Core
 
         public override void OnInitialize()
         {
-            services.Add(BoxManager.GetManager<CreatorManager>().CreateService(TypeService.Haircut));
-            services.Add(BoxManager.GetManager<CreatorManager>().CreateService(TypeService.Nails));
-            services.Add(BoxManager.GetManager<CreatorManager>().CreateService(TypeService.Brows));
+            services.Add(BoxControllers.GetController<CreatorController>().CreateService(TypeService.Haircut));
+            services.Add(BoxControllers.GetController<CreatorController>().CreateService(TypeService.Nails));
+            services.Add(BoxControllers.GetController<CreatorController>().CreateService(TypeService.Brows));
                         
-            restZone = BoxManager.GetManager<CreatorManager>().CreateRestZone();
-            cashZone = BoxManager.GetManager<CreatorManager>().CreateCashZone();
+            restZone = BoxControllers.GetController<CreatorController>().CreateRestZone();
+            cashZone = BoxControllers.GetController<CreatorController>().CreateCashZone();
         }
 
         public bool CheckFreeService(TypeService typeService)

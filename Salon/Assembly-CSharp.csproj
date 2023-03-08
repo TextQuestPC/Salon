@@ -146,7 +146,6 @@
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/DropdownTest.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ButtonAttribute.cs" />
     <Compile Include="Assets/1_Scripts/UI/Windows/Window.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Main/NamesData.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/_TestScriptableObjectB.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/ShowNativePropertyTest.cs" />
     <Compile Include="Assets/1_Scripts/UI/Buttons/MyButton.cs" />
@@ -164,24 +163,23 @@
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/ProgressBarTest.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNonSerializedFieldAttribute.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/InputAxisTest.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/GameController.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/TagAttribute.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/FoldoutTest.cs" />
     <Compile Include="Assets/1_Scripts/Interfaces/IShoot.cs" />
     <Compile Include="Assets/1_Scripts/Interfaces/ISettings.cs" />
     <Compile Include="Assets/1_Scripts/Interfaces/IMove.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/DataManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/VisitorsManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/StorageManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/BalanceManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/TimeManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/CreatorManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/UpdateManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/StateGameManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/ServicesManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/InputManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/ValuesManager.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/GameManager.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/DataController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/VisitorsController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/StorageController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/BalanceController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/TimeController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/CreatorController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/UpdateController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/StateGameController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/ServicesController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/InputController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/ValuesController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/GameController.cs" />
     <Compile Include="Assets/1_Scripts/Data/DataItemUI.cs" />
     <Compile Include="Assets/1_Scripts/Data/DataVisit.cs" />
     <Compile Include="Assets/1_Scripts/Objects/Items/Item.cs" />
@@ -205,7 +203,6 @@
     <Compile Include="Assets/1_Scripts/Systems/Move/MoveComponent.cs" />
     <Compile Include="Assets/1_Scripts/Systems/Interfaces/IWaitTimer.cs" />
     <Compile Include="Assets/1_Scripts/Systems/Move/MovePlayerComponent.cs" />
-    <Compile Include="Assets/1_Scripts/Systems/InputSystem/FocusSystem.cs" />
     <Compile Include="Assets/1_Scripts/Systems/Effects/EffectBase.cs" />
     <Compile Include="Assets/1_Scripts/Systems/InputSystem/TouchSystem.cs" />
     <Compile Include="Assets/1_Scripts/Systems/CollidersSystem/CheckStopCollider.cs" />
@@ -220,6 +217,8 @@
     <Compile Include="Assets/1_Scripts/UI/WishCanvas.cs" />
     <Compile Include="Assets/1_Scripts/UI/Windows/UIWindow.cs" />
     <Compile Include="Assets/1_Scripts/UI/Windows/StorageWindow.cs" />
+    <Compile Include="Assets/1_Scripts/Data/NamesData.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Main/UpdateGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,5 +1,4 @@
 using Characters;
-using Core;
 using UnityEngine;
 using UI;
 
@@ -15,13 +14,13 @@ namespace ObjectsOnScene
 
         protected override void PlayerInCollider(Player player)
         {
-            UIManager.Instance.GetWindow<StorageWindow>().SetDataButtons(new TypeItem[] { typeItem });
-            UIManager.Instance.ShowWindow<StorageWindow>();
+            UIManager.GetWindow<StorageWindow>().SetDataButtons(new TypeItem[] { typeItem });
+            UIManager.ShowWindow<StorageWindow>();
         }
 
         protected override void PlayerOutCollider(Player player)
         {
-            UIManager.Instance.HideWindow<StorageWindow>();
+            UIManager.HideWindow<StorageWindow>();
         }
     }
 }

@@ -1,4 +1,4 @@
-using Core;
+﻿using Core;
 using ObjectsOnScene;
 using System.Collections;
 using SystemMove;
@@ -72,7 +72,7 @@ namespace Characters
 
             yield return new WaitForSeconds(1f);
 
-            BoxManager.GetManager<VisitorsManager>().ChooseNextActionVisitor(this);
+            BoxControllers.GetController<VisitorsController>().ChooseNextActionVisitor(this);
         }
 
         public void SitDownOnChair()
@@ -83,24 +83,24 @@ namespace Characters
             (moveComponent as MoveVisitorComponent).LookAt(currentService.GetLookPosition.transform);
             transform.position = currentService.GetVisitorPosition.transform.position;
 
-            wishCanvas.ShowWish(BoxManager.GetManager<DataManager>().GetDataItemUI(GetCurrentTypeItem).SpriteItem);
+            wishCanvas.ShowWish(BoxControllers.GetController<DataController>().GetDataItemUI(GetCurrentTypeItem).SpriteItem);
         }
 
         public void CompleteAllProcedure()
         {
-            BoxManager.GetManager<VisitorsManager>().ChooseNextActionVisitor(this);
+            BoxControllers.GetController<VisitorsController>().ChooseNextActionVisitor(this);
         }
 
         public void StandAroundCash()
         {
-            wishCanvas.ShowWish(BoxManager.GetManager<DataManager>().GetDataItemUI(TypeItem.Money).SpriteItem);
+            wishCanvas.ShowWish(BoxControllers.GetController<DataController>().GetDataItemUI(TypeItem.Money).SpriteItem);
         }
 
         public void CalculateVisitor()
         {
             stateVisitor = StateVisitor.GetMoney;
 
-            BoxManager.GetManager<VisitorsManager>().ChooseNextActionVisitor(this);
+            BoxControllers.GetController<VisitorsController>().ChooseNextActionVisitor(this);
         }
 
         public void LookAt(Transform targetTransform)
@@ -122,7 +122,7 @@ namespace Characters
             ChangeMove(false);
 
             (moveComponent as MoveVisitorComponent).AfterEndMove -= AfterMoveToTarget;
-            BoxManager.GetManager<VisitorsManager>().ChooseNextActionVisitor(this);
+            BoxControllers.GetController<VisitorsController>().ChooseNextActionVisitor(this);
         }
 
         #endregion ACTIONS

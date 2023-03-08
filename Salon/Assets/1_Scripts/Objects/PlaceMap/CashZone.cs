@@ -1,4 +1,4 @@
-using Characters;
+﻿using Characters;
 using Core;
 using UnityEngine;
 
@@ -34,7 +34,7 @@ namespace ObjectsOnScene
 
         private void CashVisitor()
         {
-            Money money = BoxManager.GetManager<CreatorManager>().CreateItem(TypeItem.Money) as Money;
+            Money money = BoxControllers.GetController<CreatorController>().CreateItem(TypeItem.Money) as Money;
 
             money.SetCountMoney = waitVisitor.GetMoneyForServices;
             money.transform.position = moneyPosition.transform.position;

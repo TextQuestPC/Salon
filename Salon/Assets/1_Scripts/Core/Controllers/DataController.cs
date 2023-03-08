@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Data;
 using ObjectsOnScene;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "DataManager", menuName = "Managers/DataManager")]
-    public class DataManager : BaseManager
+    [CreateAssetMenu(fileName = "DataController", menuName = "Controllers/DataController")]
+    public class DataController : Controller
     {
         [SerializeField] private DataItemUI[] dataItemsUI;
 

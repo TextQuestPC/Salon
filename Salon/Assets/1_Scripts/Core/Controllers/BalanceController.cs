@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "BalanceManager", menuName = "Managers/BalanceManager")]
-    public class BalanceManager : BaseManager
+    [CreateAssetMenu(fileName = "BalanceController", menuName = "Controllers/BalanceController")]
+    public class BalanceController : Controller
     {
         private Dictionary<int, DataVisit[]> dataVisits;
 

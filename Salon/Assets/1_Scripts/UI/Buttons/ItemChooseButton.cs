@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using ObjectsOnScene;
-using Data;
+using UI.Buttons;
 
 namespace UI
 {
@@ -13,7 +11,7 @@ namespace UI
         private Image imageItem;
         private TypeItem typeItem;
 
-        protected override void OnClickButton()
+        protected override void AfterClick()
         {
             storageWindow.OnClickButtonItem(typeItem);
         }

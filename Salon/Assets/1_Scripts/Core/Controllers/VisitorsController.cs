@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Characters;
 using ObjectsOnScene;
 using UnityEngine;
@@ -6,18 +6,18 @@ using VisitorSystem;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "VisitorsManager", menuName = "Managers/VisitorsManager")]
-    public class VisitorsManager : BaseManager
+    [CreateAssetMenu(fileName = "VisitorsController", menuName = "Controllers/VisitorsController")]
+    public class VisitorsController : Controller
     {
         private List<Visitor> visitors = new List<Visitor>();
 
-        private ServicesManager serviceManager;
+        private ServicesController serviceManager;
 
         private Visitor currentVisitor;
 
         public override void OnStart()
         {
-            serviceManager = BoxManager.GetManager<ServicesManager>();
+            serviceManager = BoxControllers.GetController<ServicesController>();
 
             CreateVisitor();
         }
@@ -29,8 +29,8 @@ namespace Core
 
         private void CreateVisitor()
         {
-            Visitor visitor = BoxManager.GetManager<CreatorManager>().CreateVisitor();
-            DataVisit[] data = BoxManager.GetManager<BalanceManager>().GetDataVisit();
+            Visitor visitor = BoxControllers.GetController<CreatorController>().CreateVisitor();
+            DataVisit[] data = BoxControllers.GetController<BalanceController>().GetDataVisit();
             visitor.SetDataVisit = data;
             visitors.Add(visitor);
 

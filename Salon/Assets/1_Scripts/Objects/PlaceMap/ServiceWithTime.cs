@@ -1,4 +1,4 @@
-using Characters;
+﻿using Characters;
 using Core;
 using TimerSystem;
 using UI;
@@ -23,7 +23,7 @@ namespace ObjectsOnScene
             canvasService.gameObject.SetActive(true);
 
             procedureNow = true;
-            BoxManager.GetManager<TimeManager>().AddWaitingObject(this);
+            BoxControllers.GetController<TimeController>().AddWaitingObject(this);
         }
 
         public void TickTimer()
@@ -46,9 +46,9 @@ namespace ObjectsOnScene
             procedureNow = false;
             canvasService.gameObject.SetActive(false);
 
-            BoxManager.GetManager<TimeManager>().RemoveWaitingObject(this);
-            BoxManager.GetManager<GameManager>().CompleteProcedure(this);
-            BoxManager.GetManager<GameManager>().GetPlayer.EndProcedure();
+            BoxControllers.GetController<TimeController>().RemoveWaitingObject(this);
+            BoxControllers.GetController<GameController>().CompleteProcedure(this);
+            BoxControllers.GetController<GameController>().GetPlayer.EndProcedure();
 
             myVisitor.CompleteCurrentProcedure();
         }

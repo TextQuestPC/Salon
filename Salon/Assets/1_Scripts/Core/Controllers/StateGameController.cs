@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "StateGameManager", menuName = "Managers/StateGameManager")]
-    public class StateGameManager : BaseManager
+    [CreateAssetMenu(fileName = "StateDataController", menuName = "Controllers/StateDataController")]
+    public class StateDataController : Controller
     {
         #region ACTIONS
 
@@ -44,38 +44,5 @@ namespace Core
             CanSpawn = true;
             TimeGo = true;
         }
-
-        #region DO_ACTIONS
-
-        private void OnApplicationPause(bool pause)
-        {
-            if (BoxManager.GetIsLogging)
-            {
-                Debug.Log($"Application on pause = {pause}");
-            }
-
-            if (pause)
-            {
-                PausedApplication?.Invoke();
-            }
-            else
-            {
-                UnpausedApplication?.Invoke();
-            }
-        }
-
-        public void ChangeFocusApplication(bool pause)
-        {
-            if (pause)
-            {
-                FocusedApplication?.Invoke();
-            }
-            else
-            {
-                UnfocusedApplication?.Invoke();
-            }
-        }
-
-        #endregion DO_ACTIONS
     }
 }

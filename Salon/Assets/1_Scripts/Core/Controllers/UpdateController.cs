@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using SystemMove;
 using SystemShoot;
 using UnityEngine;
@@ -6,14 +6,14 @@ using GameUpdate;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "UpdateManager", menuName = "Managers/UpdateManager")]
-    public class UpdateManager : BaseManager
+    [CreateAssetMenu(fileName = "UpdateController", menuName = "Controllers/UpdateController")]
+    public class UpdateController : Controller
     {
         private UpdateGame updateGame;
 
         private List<IMove> moveObjects = new List<IMove>();
         private List<IShoot> shootObjects = new List<IShoot>();
-        private TimeManager timer;
+        private TimeController timer;
 
         private bool canMove;
         private bool timeGo;
@@ -22,12 +22,12 @@ namespace Core
 
         public override void OnInitialize()
         {
-            updateGame = BoxManager.GetManager<CreatorManager>().CreateUpdateGame();
+            updateGame = BoxControllers.GetController<CreatorController>().CreateUpdateGame();
 
-            timer = BoxManager.GetManager<TimeManager>();
+            timer = BoxControllers.GetController<TimeController>();
 
-            BoxManager.GetManager<StateGameManager>().ChangeCanMove += (bool canMove) => { this.canMove = canMove; };
-            BoxManager.GetManager<StateGameManager>().ChangeTimeGo += (bool timeGo) => { this.timeGo = timeGo; };
+            BoxControllers.GetController<StateDataController>().ChangeCanMove += (bool canMove) => { this.canMove = canMove; };
+            BoxControllers.GetController<StateDataController>().ChangeTimeGo += (bool timeGo) => { this.timeGo = timeGo; };
         }
 
         public override void OnStart()

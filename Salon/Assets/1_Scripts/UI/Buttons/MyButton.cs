@@ -12,7 +12,11 @@ namespace UI.Buttons
             GetComponent<Button>().onClick.AddListener(()=>
             {
                 AudioManager.Instance.PlayUISound(TypeUISound.ButtonClick);
+
+                AfterClick();
             });
         }
+
+        protected virtual void AfterClick() { }
     }
 }

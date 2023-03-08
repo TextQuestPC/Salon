@@ -6,8 +6,8 @@ using UnityEngine;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "CreatorManager", menuName = "Managers/CreatorManager")]
-    public class CreatorManager : BaseManager
+    [CreateAssetMenu(fileName = "CreatorController", menuName = "Controllers/CreatorController")]
+    public class CreatorController : Controller
     {
         [SerializeField] private Player playerPrefab;
         [SerializeField] private Service[] servicesPrefabs;
@@ -179,13 +179,6 @@ namespace Core
             GameObject newObject = new GameObject(NamesData.TOUCH_SYSTEM);
             newObject.transform.SetParent(controllers.transform);
             return newObject.AddComponent<TouchSystem>();
-        }
-
-        public FocusSystem CreateFocusSystem()
-        {
-            GameObject newObject = new GameObject(NamesData.FOCUS_SYSTEM);
-            newObject.transform.SetParent(controllers.transform);
-            return newObject.AddComponent<FocusSystem>();
         }
 
         public UpdateGame CreateUpdateGame()

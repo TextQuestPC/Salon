@@ -25,19 +25,19 @@ namespace SystemTarget
 
         //private void ChooseTarget()
         //{
-        //    target = BoxManager.GetManager<EnemiesManager>().GetFirstEnemy();
+        //    target = BoxControllers.GetController<EnemiesManager>().GetFirstEnemy();
 
         //    if (target == null)
         //    {
         //        Debug.Log($"Нет цели для Tower. Enemy = null");
 
-        //        BoxManager.GetManager<EnemiesManager>().NewEnemy += WaitTarget;
+        //        BoxControllers.GetController<EnemiesManager>().NewEnemy += WaitTarget;
         //    }
         //}
 
         //private void WaitTarget(ObjectScene objectScene)
         //{
-        //    BoxManager.GetManager<EnemiesManager>().NewEnemy -= WaitTarget;
+        //    BoxControllers.GetController<EnemiesManager>().NewEnemy -= WaitTarget;
         //    target = objectScene ;
 
         //    if (waitTarget != null)
