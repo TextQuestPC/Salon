@@ -1,5 +1,4 @@
-﻿using Characters;
-using Core;
+﻿using Core;
 using TimerSystem;
 using UI;
 using UnityEngine;

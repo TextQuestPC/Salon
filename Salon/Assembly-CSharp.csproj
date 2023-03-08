@@ -73,14 +73,13 @@
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/BoxGroupTest.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/ValidateInputTest.cs" />
     <Compile Include="Assets/1_Scripts/UI/Buttons/CloseButton.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/Core/BoxControllers.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/BoxControllers.cs" />
     <Compile Include="Assets/1_Scripts/UI/Windows/LogWindow.cs" />
     <Compile Include="Assets/1_Scripts/Core/Interfaces/IInitialize.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/RequiredTest.cs" />
     <Compile Include="Assets/1_Scripts/Core/Managers/LogManager.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/ShowAssetPreviewTest.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/EnumFlagsAttribute.cs" />
-    <Compile Include="Assets/1_Scripts/Controllers/PositionCemeteryController.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/AnimatorParamAttribute.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/DisableIfAttribute.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/ExpandableTest.cs" />
@@ -104,7 +103,7 @@
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/ShowIfTest.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/CurveRangeTest.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/Core/MonoController.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/MonoController.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/SceneTest.cs" />
     <Compile Include="Assets/1_Scripts/Systems/SaveSystem/SaveData.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/MetaAttributes/HideIfAttribute.cs" />
@@ -119,7 +118,7 @@
     <Compile Include="Assets/1_Scripts/Core/Main/DontDestroy.cs" />
     <Compile Include="Assets/1_Scripts/Core/Managers/TestManager.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes/SortingLayerAttribute.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/Core/Controller.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/Controller.cs" />
     <Compile Include="Assets/1_Scripts/Core/Data/SCRO_MainData.cs" />
     <Compile Include="Assets/1_Scripts/Types/TypeMusic.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/MinMaxValueTest.cs" />
@@ -142,7 +141,7 @@
     <Compile Include="Assets/1_Scripts/Core/Managers/AppManager.cs" />
     <Compile Include="Assets/1_Scripts/Core/Main/Localizator.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/DisableIfTest.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/Core/SceneControllers.cs" />
+    <Compile Include="Assets/1_Scripts/Core/Controllers/SceneControllers.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Test/DropdownTest.cs" />
     <Compile Include="Assets/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ButtonAttribute.cs" />
     <Compile Include="Assets/1_Scripts/UI/Windows/Window.cs" />
@@ -168,18 +167,16 @@
     <Compile Include="Assets/1_Scripts/Interfaces/IShoot.cs" />
     <Compile Include="Assets/1_Scripts/Interfaces/ISettings.cs" />
     <Compile Include="Assets/1_Scripts/Interfaces/IMove.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/DataController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/VisitorsController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/StorageController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/BalanceController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/TimeController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/CreatorController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/UpdateController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/StateGameController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/ServicesController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/InputController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/ValuesController.cs" />
-    <Compile Include="Assets/1_Scripts/Core/Controllers/GameController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/DataController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/VisitorsController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/StorageController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/BalanceController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/TimeController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/CreatorController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/UpdateController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/ServicesController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/ValuesController.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/GameController.cs" />
     <Compile Include="Assets/1_Scripts/Data/DataItemUI.cs" />
     <Compile Include="Assets/1_Scripts/Data/DataVisit.cs" />
     <Compile Include="Assets/1_Scripts/Objects/Items/Item.cs" />
@@ -204,7 +201,7 @@
     <Compile Include="Assets/1_Scripts/Systems/Interfaces/IWaitTimer.cs" />
     <Compile Include="Assets/1_Scripts/Systems/Move/MovePlayerComponent.cs" />
     <Compile Include="Assets/1_Scripts/Systems/Effects/EffectBase.cs" />
-    <Compile Include="Assets/1_Scripts/Systems/InputSystem/TouchSystem.cs" />
+    <Compile Include="Assets/1_Scripts/Controllers/Mono/TouchMonuController.cs" />
     <Compile Include="Assets/1_Scripts/Systems/CollidersSystem/CheckStopCollider.cs" />
     <Compile Include="Assets/1_Scripts/Systems/Move/MoveVisitorComponent.cs" />
     <Compile Include="Assets/1_Scripts/Data/Type/TypeEffect.cs" />
@@ -219,6 +216,9 @@
     <Compile Include="Assets/1_Scripts/UI/Windows/StorageWindow.cs" />
     <Compile Include="Assets/1_Scripts/Data/NamesData.cs" />
     <Compile Include="Assets/1_Scripts/Core/Main/UpdateGame.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets/2_Visual/Shaders/CustomFakeLighting.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

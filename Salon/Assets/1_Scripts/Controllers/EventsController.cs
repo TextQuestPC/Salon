@@ -8,29 +8,77 @@ namespace Core
     [CreateAssetMenu(fileName = "EventsController", menuName = "Controllers/Game/EventsController")]
     public class EventsController : Controller
     {
-        private Action StartGameEvent;
-        private Action<int> ChangeGoldEvent;
+        private Action<bool> changeTimeGoEvent;
+        private Action<bool> changeCanMoveEvent;
+        private Action<int> changeGoldEvent;
 
-        public void SubscribeOnChangeGold(Action<int> sender)
+
+        public void SubscribeOnTimeGo(Action<bool> sender)
         {
-            if (ChangeGoldEvent!= null && ChangeGoldEvent.GetInvocationList().Contains(sender))
+            if (changeTimeGoEvent != null && changeTimeGoEvent.GetInvocationList().Contains(sender))
             {
                 LogManager.LogError($"Try 2 subscribes on ChangeGoldEvent");
             }
             else
             {
-                ChangeGoldEvent += sender;
+                changeTimeGoEvent += sender;
+            }
+        }
+
+        public void UnsubscribeOnTimeGo(Action<bool> sender)
+        {
+            changeTimeGoEvent -= sender;
+        }
+
+        public void ChangeTimeGo(bool value)
+        {
+            changeTimeGoEvent?.Invoke(value);
+        }
+
+
+        public void SubscribeOnCanMove(Action<bool> sender)
+        {
+            if (changeCanMoveEvent != null && changeCanMoveEvent.GetInvocationList().Contains(sender))
+            {
+                LogManager.LogError($"Try 2 subscribes on ChangeGoldEvent");
+            }
+            else
+            {
+                changeCanMoveEvent += sender;
+            }
+        }
+
+        public void UnsubscribeOnCanMove(Action<bool> sender)
+        {
+            changeCanMoveEvent -= sender;
+        }
+
+        public void ChangeCanMove(bool value)
+        {
+            changeCanMoveEvent?.Invoke(value);
+        }
+
+
+        public void SubscribeOnChangeGold(Action<int> sender)
+        {
+            if (changeGoldEvent!= null && changeGoldEvent.GetInvocationList().Contains(sender))
+            {
+                LogManager.LogError($"Try 2 subscribes on ChangeGoldEvent");
+            }
+            else
+            {
+                changeGoldEvent += sender;
             }
         }
 
         public void UnsubscribeOnChangeGold(Action<int> sender)
         {
-            ChangeGoldEvent -= sender;
+            changeGoldEvent -= sender;
         }
 
         public void ChangeGold(int value)
         {
-            ChangeGoldEvent?.Invoke(value);
+            changeGoldEvent?.Invoke(value);
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Core;
-using InputSystem;
 using ObjectsOnScene;
 using System.Collections.Generic;
 using SystemMove;
@@ -44,7 +43,7 @@ namespace Characters
         {
             canMove = true;
 
-            if (TouchSystem.Instance.GetMouseDown)
+            if (BoxControllers.GetController<TouchMonuController>().GetMouseDown)
             {
                 moveComponent.MoveNow = true;
 
