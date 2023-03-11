@@ -1,0 +1,3 @@
+Settings;Настройки;Settings
+Music;Музыка;Music
+Vibration;Вибрация;Vibration
