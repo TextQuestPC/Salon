@@ -220,7 +220,7 @@
     <Compile Include="Assets\1_Scripts\Controllers\UpdateController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\ThisFileNeedDelite.txt" />
+    <None Include="Assets\ThisFileNeedDelitee.txt" />
     <None Include="Assets\Resources\UI.txt" />
     <None Include="Assets\2_Visual\Shaders\CustomFakeLighting.shader" />
   </ItemGroup>
