@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Core;
 using Logs;
 using UI.Windows;
 
@@ -30,6 +31,16 @@ namespace UI
             {
                 window.Value.OnStart();
             }
+        }
+
+        public void OnStart()
+        {
+            foreach (var window in windows)
+            {
+                window.Value.OnStart();
+            }
+
+            BoxControllers.GetController<EventsController>().SubscribeOnChangeLocalization(ChangeLocalization);
         }
 
         #endregion INITIALIZE
@@ -74,7 +85,7 @@ namespace UI
             }
         }
 
-        public static void ChangeLanguage()
+        private static void ChangeLocalization()
         {
             foreach (var window in Instance.windows)
             {

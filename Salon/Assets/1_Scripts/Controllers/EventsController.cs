@@ -8,10 +8,34 @@ namespace Core
     [CreateAssetMenu(fileName = "EventsController", menuName = "Controllers/Game/EventsController")]
     public class EventsController : Controller
     {
+        private Action changeLocalization;
+
         private Action<bool> changeTimeGoEvent;
         private Action<bool> changeCanMoveEvent;
         private Action<int> changeGoldEvent;
 
+
+        public void SubscribeOnChangeLocalization(Action sender)
+        {
+            if (changeLocalization != null && changeLocalization.GetInvocationList().Contains(sender))
+            {
+                LogManager.LogError($"Try 2 subscribes on ChangeGoldEvent");
+            }
+            else
+            {
+                changeLocalization += sender;
+            }
+        }
+
+        public void UnsubscribeOnChangeLocalization(Action sender)
+        {
+            changeLocalization -= sender;
+        }
+
+        public void ChangeLocalization()
+        {
+            changeLocalization?.Invoke();
+        }
 
         public void SubscribeOnTimeGo(Action<bool> sender)
         {

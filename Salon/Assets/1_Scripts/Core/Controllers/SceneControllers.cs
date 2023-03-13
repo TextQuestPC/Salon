@@ -35,6 +35,8 @@ namespace Core
 
             OtherActions();
 
+            BoxControllers.GetController<EventsController>().ChangeLocalization();
+
             OnInitEvent?.Invoke();
         }
 
